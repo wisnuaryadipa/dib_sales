@@ -2,9 +2,9 @@ import express, { ErrorRequestHandler, Request } from 'express';
 import {ConditionalExpression} from 'typescript';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import {IError} from '../interfaces/IError';
-import config from '../config';
-import Logger from './logger';
+import {IError} from '@src/interfaces/IError';
+import config from '@src/config';
+import Logger from '@src/loaders/logger';
 
 
 

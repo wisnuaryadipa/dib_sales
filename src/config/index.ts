@@ -1,6 +1,6 @@
 
 import dotenv from 'dotenv';
-import {IDBEnv, IConfig, IDBPostgres, IDBType} from '../interfaces/IConfigs'
+import {IDBEnv, IConfig, IDBPostgres, IDBType} from '@src/interfaces/IConfigs'
 
 const envFound = dotenv.config();
 const port = parseInt(process.env.PORT || "80")

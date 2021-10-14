@@ -1,10 +1,10 @@
 export {};
 import winston from 'winston';
-import config from '../config';
+import configss from '../config';
 import {transports} from '../config/logging'
 
 const LoggerInstance = winston.createLogger({
-  level: config.logs.level,
+  level: configss.logs.level,
   levels: winston.config.npm.levels,
   format: winston.format.combine(
     winston.format.timestamp({

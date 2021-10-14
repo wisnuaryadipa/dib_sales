@@ -1,3 +1,4 @@
+export {};
 import winston from 'winston';
 import config from '../config';
 import {transports} from '../config/logging'

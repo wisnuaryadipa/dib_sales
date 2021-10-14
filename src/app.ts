@@ -7,11 +7,11 @@ import db from './loaders/sequelize'
 
 
 
-export {};
-
 import './injection/module/ProcessEnv'
 // rest of the code remains same
 
+
+export {};
 async function startServer() {
     const app = express();
     

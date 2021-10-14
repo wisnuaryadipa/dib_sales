@@ -1,6 +1,6 @@
 import express from 'express';
 import config from '@src/config';
-import Logger from '@src/loaders/logger';
+// import Logger from '@src/loaders/Logger';
 import loaders from '@src/loaders';
 import db from './loaders/sequelize'
 
@@ -17,13 +17,13 @@ async function startServer() {
     // app.get('/', (req, res) => res.send('Express + TypeScript Server'));
     
     app.listen(config.port, () => {
-        Logger.info(`
-        ################################################
-        🛡️  Server listening on port: ${config.port} 🛡️
-        ################################################
-        `);
+        // Logger.info(`
+        // ################################################
+        // 🛡️  Server listening on port: ${config.port} 🛡️
+        // ################################################
+        // `);
     }).on('error', err => {
-        Logger.error(err);
+        // Logger.error(err);
         process.exit(1);
     })
 

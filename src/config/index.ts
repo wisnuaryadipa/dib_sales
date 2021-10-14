@@ -1,4 +1,4 @@
-
+export {};
 import dotenv from 'dotenv';
 import {IDBEnv, IConfig, IDBPostgres, IDBType} from '@src/interfaces/IConfigs'
 

@@ -1,3 +1,4 @@
+export {};
 import express from 'express';
 import config from '@src/config';
 // import Logger from '@src/loaders/Logger';

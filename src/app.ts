@@ -14,7 +14,7 @@ async function startServer() {
     
     await loaders({ expressApp: app });
 
-    app.get('/', (req, res) => res.send('Express + TypeScript Server'));
+    // app.get('/', (req, res) => res.send('Express + TypeScript Server'));
     
     app.listen(config.port, () => {
         Logger.info(`

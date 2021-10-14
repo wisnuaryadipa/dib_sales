@@ -1,4 +1,4 @@
-import express, { ErrorRequestHandler, Request } from 'express';
+import express, { ErrorRequestHandler, Request, Response } from 'express';
 import {ConditionalExpression} from 'typescript';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -15,10 +15,10 @@ export default (app: express.Application) => {
    * @TODO Explain why they are here
    */
   
-  app.get('/status', (req, res) => {
+  app.get('/status', (req: Request, res: Response) => {
     res.send('Express + TypeScript Server')
   });
-  app.head('/status', (req, res) => {
+  app.head('/status', (req: Request, res: Response) => {
     res.status(200).end();
   });
 
@@ -30,14 +30,14 @@ export default (app: express.Application) => {
   app.use(bodyParser.json());
 
   /// catch 404 and forward to error handler
-  app.use((req: Request, res, next) => {
+  app.use((req: Request, res: Response, next) => {
     const err = new Error('Not Found') as IError ;
     err.status = 404;
     next(err);
   });
   
   /// error handlers
-  app.use(((err, req, res, next) => {
+  app.use(((err: any, req: Request, res: Response, next) => {
     /**
      * Handle 401 thrown by express-jwt library
      */
@@ -50,7 +50,7 @@ export default (app: express.Application) => {
     return next(err);
   }) as ErrorRequestHandler);
 
-  app.use(((err, req, res, next) => {
+  app.use(((err: any, req: Request, res: Response, next) => {
     res.status(err.status || 500);
     res.json({
       errors: {

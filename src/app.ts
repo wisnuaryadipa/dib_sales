@@ -7,6 +7,8 @@ import db from './loaders/sequelize'
 
 
 
+export {};
+
 import './injection/module/ProcessEnv'
 // rest of the code remains same
 
@@ -31,5 +33,3 @@ async function startServer() {
 }
 
 startServer();
-
-export {};

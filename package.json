@@ -9,7 +9,8 @@
     "inspect": "nodemon --inspect src/app.ts",
     "production": "NODE_ENV='production' npm start",
     "start": "nodemon",
-    "start:prodpm2": "pm2 start ts-node -- -r tsconfig-paths/register -r ts-node/register ./src/app.ts"
+    "start:prodpm2": "pm2 start ts-node -- -r tsconfig-paths/register -r ts-node/register ./src/app.ts",
+    "start:pm2": "pm2 start build-node ./build/app.js"
   },
   "repository": {
     "type": "git",

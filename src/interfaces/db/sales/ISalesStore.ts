@@ -1,0 +1,15 @@
+export interface ISalesStore {
+    id: number,
+    storeName: string,
+    contactNumber: string|undefined,
+    address: string,
+    city: string,
+    lat: string,
+    lng: string,
+    status: string,
+    customerName: string|undefined,
+    storeCategory: number,
+    firstSales: string|undefined,
+    createdAt: Date,
+    updatedAt: Date,
+}

@@ -14,9 +14,10 @@ module.exports = (sequelize: Sequelize) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    remember_token: {
+    rememberToken: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      field: 'remember_token'
     },
     uuid: {
       type: DataTypes.STRING,

@@ -14,9 +14,10 @@ const Roles = (sequelize: Sequelize) => {
           type: DataTypes.STRING,
           allowNull: false
         },
-        sub_role: {
+        subRole: {
           type: DataTypes.STRING,
-          allowNull: true
+          allowNull: true,
+          field: 'sub_role'
         },
         createdAt: {
             type: DataTypes.DATE,

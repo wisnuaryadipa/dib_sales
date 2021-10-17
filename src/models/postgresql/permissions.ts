@@ -7,9 +7,10 @@ const Permissions = (sequelize: Sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        display_name: {
+        displayName: {
             type: DataTypes.STRING,
             allowNull: true,
+            field: 'display_name'
         },
         description: {
             type: DataTypes.STRING,

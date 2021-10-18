@@ -10,7 +10,7 @@
     "pretty": true,
     "sourceMap": true,
     "allowJs": true,
-    "noEmit": false,
+    "noEmit": true,
     "baseUrl": "./",
     "paths": {
       "*": ["src/subfolder/node_modules/@types/*", "*"],

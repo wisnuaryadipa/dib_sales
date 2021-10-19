@@ -5,7 +5,7 @@ import cors from 'cors';
 import {IError} from '@src/interfaces/IError';
 import config from '@src/config';
 import Logger from '@src/loaders/Logger';
-import apiRouter from '@src/routes/api';
+import routerCollection from '@src/routes';
 
 
 
@@ -29,7 +29,9 @@ export default (app: express.Application) => {
   app.enable('trust proxy');
 
   app.use(cors());
-  app.use('/api', apiRouter)
+
+  // Collection all router used in this app
+  routerCollection(app);
 
   // Middleware that transforms the raw string of req.body into json
   app.use(bodyParser.json());

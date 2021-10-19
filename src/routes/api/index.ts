@@ -1,7 +1,7 @@
 import {Router} from 'express';
-import userController from '@src/routes/api/v1/user'
+import apiV1Router from '@src/routes/api/v1'
 
-const apiV1 = Router();
-apiV1.use('/user',userController);
+const apiRouter = Router();
+apiRouter.use('/v1',apiV1Router);
 
-export default apiV1;
+export default apiRouter;

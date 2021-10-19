@@ -1,7 +1,10 @@
-import {Router} from 'express';
-import apiV1 from '@src/routes/api';
+import {Router, Application} from 'express';
+import api from '@src/routes/api';
 
-const apiRouter = Router();
-apiRouter.use('/v1', apiV1);
+const routes = (app: Application) => {
 
-export default apiRouter;
+    app.use('/api', api);
+}
+
+
+export default routes;

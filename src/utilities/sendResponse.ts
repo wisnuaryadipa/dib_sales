@@ -40,3 +40,5 @@ const sendResponse = (req: Request, res: Response, option: Ioption) => {
   
     res.status(status).send(dataToSend)
 }
+
+export default sendResponse;
